@@ -54,5 +54,10 @@ class DatabaseSeeder extends Seeder
         foreach ($teachers as $teacher) {
             DB::table('teacher')->insert($teacher);
         }
+
+        $this->call([
+            StudentSeeder::class,
+            TeacherSeeder::class,
+        ]);
     }
 }
