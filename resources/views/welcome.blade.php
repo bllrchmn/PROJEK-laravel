@@ -24,36 +24,106 @@
             @if (Route::has('login'))
                 <nav class="flex items-center justify-end gap-4">
                     @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
+                    <a
                             href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
+                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal animated-rainbow"
                         >
                             Log in
-                        </a>
+                    </a>
+
+<style>
+@keyframes rainbow {
+    0% { background-color: rgb(255, 0, 0); }     /* Red */
+    16% { background-color: rgb(255, 165, 0); }  /* Orange */
+    33% { background-color: rgb(255, 255, 0); }  /* Yellow */
+    50% { background-color: rgb(0, 128, 0); }    /* Green */
+    66% { background-color: rgb(0, 0, 255); }    /* Blue */
+    83% { background-color: rgb(75, 0, 130); }   /* Indigo */
+    100% { background-color: rgb(238, 130, 238); } /* Violet */
+}
+
+.animated-rainbow {
+    animation: rainbow 5s linear infinite;
+    color: white !important; /* Agar teks kontras */
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.animated-rainbow:hover {
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+</style>
+
+                       
+                    @else
+                    
+                    <a
+                            href="{{ route('login') }}"
+                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal animated-rainbow"
+                        >
+                            Log in
+                    </a>
+
+                    <style>
+@keyframes rainbow {
+    0% { background-color: rgb(255, 0, 0); }     /* Red */
+    16% { background-color: rgb(255, 165, 0); }  /* Orange */
+    33% { background-color: rgb(255, 255, 0); }  /* Yellow */
+    50% { background-color: rgb(0, 128, 0); }    /* Green */
+    66% { background-color: rgb(0, 0, 255); }    /* Blue */
+    83% { background-color: rgb(75, 0, 130); }   /* Indigo */
+    100% { background-color: rgb(238, 130, 238); } /* Violet */
+}
+
+.animated-rainbow {
+    animation: rainbow 5s linear infinite;
+    color: white !important; /* Agar teks kontras */
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.animated-rainbow:hover {
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+</style>
+
 
                         @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
+                           
                         @endif
                     @endauth
                 </nav>
             @endif
         </header>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXV5c-UbMWn1ezE4Wx1WBmX_4FhURz7-tySuD0J_CE44PYHMh4z6g1eD47Da803dFjNFl1DQ3ZuKLGuOigPhB-LetMLLAyi1I9ZogDTHwUT2pymP3nQChxsDqFJh7ZicUILyEd2e3vGq7E1s4D2r5c0sd83Y-DQQ8wKte4YfL4dK-1HmG38ZV3KGDtI0a1/s320/vector-billal.png" 
+alt="Avatar" 
+class="rounded-circle mb-3" 
+width="220"
+style="float: right;">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 25px;
+      color:rgb(205, 23, 23);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome To Halaman Cecep</h1>
+</body>
+        
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
             <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
                 <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
-                    <h1 class="mb-1 font-medium">Let's get started</h1>
-                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Laravel has an incredibly rich ecosystem. <br>We suggest starting with the following.</p>
+                <li class="mb-3 font-medium" style="font-size: 20px;">Let's get started</li>
+                <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Laravel has an incredibly rich ecosystem. <br>We suggest starting with the following.</p>
                     <ul class="flex flex-col mb-4 lg:mb-6">
                         <li class="flex items-center gap-4 py-2 relative before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A] before:top-1/2 before:bottom-0 before:left-[0.4rem] before:absolute">
                             <span class="relative py-1 bg-white dark:bg-[#161615]">
@@ -269,6 +339,7 @@
                 </div>
             </main>
         </div>
+        
 
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
